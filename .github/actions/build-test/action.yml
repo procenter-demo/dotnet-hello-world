@@ -4,6 +4,9 @@ description: Builds and tests the .NET project
 runs:
   using: 'composite'
   steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
     - name: Build and Test
       run: dotnet build --configuration Release && dotnet test
       
