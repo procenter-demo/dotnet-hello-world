@@ -9,6 +9,7 @@ runs:
       uses: actions/checkout@v2
 
     - name: Build and Test
+      shell: bash
       run: |
         dotnet build --configuration Release
         dotnet test
